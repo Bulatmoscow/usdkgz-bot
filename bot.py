@@ -4,7 +4,9 @@ from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 
 # Клиент Anthropic
-client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
+client = anthropic.Anthropic(
+    api_key=os.environ.get("ANTHROPIC_API_KEY"),
+)
 
 # Системный промпт — мозг агента
 SYSTEM_PROMPT = """Ты — AI агент для создания презентационного контента USDKG.
